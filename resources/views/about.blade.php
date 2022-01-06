@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
+<!-- view is the user interface of the application -->
+
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
@@ -14,7 +16,8 @@
                         </div>
                     @endif
 
-                   This is the about page.
+                   Thanks for joining Larafest Jobs.<br>
+                   We are a nationwide company supplying you and thousands more with jobs each day!
                 </div>
             </div>
         </div>

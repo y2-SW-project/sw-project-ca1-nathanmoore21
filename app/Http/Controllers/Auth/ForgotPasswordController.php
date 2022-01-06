@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers\Auth;
 
+//controller containts the loggic - how to validate data and save to the database through the model
+
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\SendsPasswordResetEmails;
 

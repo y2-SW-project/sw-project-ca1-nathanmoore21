@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
+<!-- view is the user interface of the application -->
+
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
@@ -15,12 +17,9 @@
                     @endif
 
                     Welcome to Larafest Jobs.
-
+                    <p>
                     Read more <a href="{{ route('about') }}"> about us</a>
-
-                    <h5> errors </h5>
-                    <p>Registering new users - when I register a new user it dosn't update in the 'user_role' in the database - I have been manually changing it for it to work</p>
-                    <p>Final lesson, can't view the job or festival information</p>
+</p>
                 </div>
             </div>
         </div>

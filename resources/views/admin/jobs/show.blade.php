@@ -44,7 +44,7 @@
             </tr>
 </tbody>
 </table>
-<a href="{{ route('user.jobs.index') }}" class="btn btn-default">Back</a>
+<a href="{{ route('admin.jobs.index') }}" class="btn btn-default">Back</a>
 </div>
 </div>
 </div>

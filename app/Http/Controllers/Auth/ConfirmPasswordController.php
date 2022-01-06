@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers\Auth;
 
+//controller containts the loggic - how to validate data and save to the database through the model
+
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\ConfirmsPasswords;

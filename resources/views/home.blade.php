@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
+<!-- view is the user interface of the application -->
+
 @section('content')
 <div class="container">
     <div class="row justify-content-center">

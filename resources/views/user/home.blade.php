@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
+<!-- view is the user interface of the application -->
+
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
@@ -15,6 +17,7 @@
                     @endif
 
                     You are logged in as an ordinary user!
+                    <a href="{{ route('user.jobs.index')}}">View all Jobs</a>
                 </div>
             </div>
         </div>

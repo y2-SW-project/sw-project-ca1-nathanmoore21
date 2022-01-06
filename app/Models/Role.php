@@ -2,6 +2,8 @@
 
 namespace App\Models;
 
+//the model is used to interact with the database
+
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 

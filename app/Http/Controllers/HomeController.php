@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+//controller containts the logic - how to validate data and save to the database
+
 use Illuminate\Http\Request;
 use Auth;
 

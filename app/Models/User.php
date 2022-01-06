@@ -2,6 +2,8 @@
 
 namespace App\Models;
 
+//the model is used to interact with the database
+
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -42,6 +44,9 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
+
+    //telling laravlee that users, user_role and roles are related. this will need
+    //a many to many relationship between users and roles
     public function roles()
     {
         return $this->belongsToMany('App\Models\Role', 'user_role');

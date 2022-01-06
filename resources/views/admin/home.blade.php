@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
+<!-- view is the user interface of the application -->
+
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
@@ -14,7 +16,8 @@
                         </div>
                     @endif
 
-                    You are logged in as an admin user!
+                    You are logged in as an admin user! 
+                    <a href="{{ route('admin.jobs.index')}}">View all Jobs</a>
                 </div>
             </div>
         </div>

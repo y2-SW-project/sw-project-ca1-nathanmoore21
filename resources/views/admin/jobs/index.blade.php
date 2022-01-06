@@ -9,6 +9,7 @@
             <div class="card">
                 <div class="card-header">
                     Jobs
+                    <a href="{{ route('admin.jobs.create') }}" class="btn btn-primary float-right">Add</a>
                 </div>
 <div class="card-body">
     @if (count($jobs)=== 0)
@@ -37,7 +38,15 @@
             <td>{{ $job->contact_phone }}</td>
 
             <td>
-                <a href="{{ route('user.jobs.show', $job->id) }}" class="btn btn-primary">View</a>
+                <a href="{{ route('admin.jobs.show', $job->id) }}" 
+                    class="btn btn-default">View</a>
+                <a href="{{ route('admin.jobs.edit', $job->id) }}" 
+                    class="btn btn-warning">Edit</a>
+                <form style="display:inline-block" method="POST"
+                action="{{ route('admin.jobs.destroy', $job->id) }}">
+                <input type="hidden" name="_method" value="DELETE">
+                <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                <button type="submit" class="form-cotrol btn btn-danger">Delete</a>
 </form>
 </td>
 </tr>
