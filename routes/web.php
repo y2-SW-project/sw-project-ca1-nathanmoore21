@@ -36,6 +36,9 @@ Route::get('/about', [PageController::class, 'about'])->name('about');
 Route::get('/user/jobs/', [UserJobController::class, 'index'])->name('user.jobs.index');
 Route::get('/user/jobs/{id}', [UserJobController::class, 'show'])->name('user.jobs.show');
 Route::get('/admin/jobs/', [AdminJobController::class, 'index'])->name('admin.jobs.index');
+
+Route::get('/admin/users/', [AdminJobController::class, 'home'])->name('admin.jobs.home');
+
 Route::get('/admin/jobs/create', [AdminJobController::class, 'create'])->name('admin.jobs.create');
 //view by id (show)
 //id will be passed in and call the show() in admin\JobController
@@ -46,4 +49,3 @@ Route::get('/admin/jobs/{id}/edit', [AdminJobController::class, 'edit'])->name('
 Route::put('/admin/jobs/{id}', [AdminJobController::class, 'update'])->name('admin.jobs.update');
 //delete job from database using the delete route
 Route::delete('/admin/jobs/{id}', [AdminJobController::class, 'destroy'])->name('admin.jobs.destroy');
-
