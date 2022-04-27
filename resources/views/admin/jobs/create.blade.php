@@ -1,3 +1,4 @@
+<!-- This page will be for admin use only, this will be for creating a new job listing -->
 <!DOCTYPE html>
 <html>
 
@@ -13,38 +14,24 @@
     <link rel="stylesheet" href="{{ asset('css/main.css') }}">
     <title>Laravel Jobs</title>
 </head>
-
 <!-- style sheet -->
 <link rel="stylesheet" href="css/main.css">
-
 
 <body>
     <div class="topnav">
         <div class="title">LARAVEL JOBS</div>
-
         <nav class="menu">
             <ul>
                 <li><a href="{{ route('home') }}">Home</a></li>
                 <li><a href="{{ route('about') }}">About</a></li>
                 <li> <a href="{{ route('logout') }}"
                         onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                        Logout
-                    </a></li>
+                        Logout</a></li>
             </ul>
         </nav>
     </div>
 
-
     @section('content')
-    <div class="body">
-        <h2>Login to Laravel Jobs</h2>
-        Laravel Jobs strives to put you first with free access to search for jobs, research companies. Every day, we
-        connect hundereds of people with new opportunities.
-    </div>
-    <hr>
-    <div class="main">
-        <h5>Sign into your account below to discover hundreds of job offers for you!</h5>
-    </div>
     <div class="container">
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
@@ -53,8 +40,7 @@
                         Add new Job
                     </div>
                     <div class="card-body">
-                        <!-- this block is ran if the validation code in the controller fails
-          this code looks after displaying the correct error message to the user -->
+                        <!-- If there are any errors, display them -->
                         @if ($errors->any())
                         <div class="alert alert-danger">
                             <ul>
@@ -64,45 +50,47 @@
                             </ul>
                         </div>
                         @endif
+
+                        <!-- Form for creating new listing -->
                         <form method="POST" action="{{ route('admin.jobs.store')  }}">
                             <input type="hidden" name="_token" value="{{  csrf_token()  }}">
                             <div class="form-group">
-
-                                <label for="name">Name</label>
+                                <label for="name">Name:</label>
                                 <input type="text" class="form-control" id="name" name="name"
                                     value="{{ old('name') }}" />
                             </div>
                             <div class="form-group">
-                                <label for="location">Location</label>
+                                <label for="location">Location:</label>
                                 <input type="text" class="form-control" id="location" name="location"
                                     value="{{ old('location') }}" />
                             </div>
                             <div class="form-group">
-                                <label for="description">Description</label>
+                                <label for="description">Description:</label>
                                 <input type="text" class="form-control" id="description" name="description"
                                     value="{{ old('description') }}" />
                             </div>
                             <div class="form-group">
-                                <label for="positions_available">Positions Available</label>
+                                <label for="positions_available">Positions Available:</label>
                                 <input type="text" class="form-control" id="positions_available"
                                     name="positions_available" value="{{ old('positions_available') }}" />
                             </div>
                             <div class="form-group">
-                                <label for="requirements">Requirements</label>
+                                <label for="requirements">Requirements:</label>
                                 <input type="text" class="form-control" id="requirements" name="requirements"
                                     value="{{ old('requirements') }}" />
                             </div>
                             <div class="form-group">
-                                <label for="wage">Wage</label>
+                                <label for="wage">Wage:</label>
                                 <input type="wage" class="form-control" id="wage" name="wage"
                                     value="{{ old('wage') }}" />
                             </div>
                             <div class="form-group">
-                                <label for="contact_phone">Contact Phone</label>
+                                <label for="contact_phone">Contact Phone:</label>
                                 <input type="text" class="form-control" id="contact_phone" name="contact_phone"
                                     value="{{ old('contact_phone') }}" />
                             </div>
-
+                            <br>
+                            <!-- Cancle and Submit button -->
                             <a href="{{ route('admin.jobs.index') }}" class="btn btn-outline">Cancel</a>
                             <button type="submit" class="btn btn-primary float-right">Submit</button>
                         </form>
@@ -158,5 +146,4 @@
     </div>
     </div>
 </body>
-
 </html>

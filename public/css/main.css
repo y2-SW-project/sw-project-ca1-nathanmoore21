@@ -5,9 +5,10 @@
 }
 
 .openpara {
-  padding-left: 375px;
-  padding-right: 375px;
+    padding-left: 375px;
+    padding-right: 375px;
 }
+
 /* HEADING */
 .title {
     font-family: 'Rubik', sans-serif;
@@ -196,16 +197,16 @@ body {
 
 /* FORM */
 form {
-  font-weight: 300;
-  width: 30%;
-  border-width: 2px;
-  border-radius: 6px;
-  border-style: solid;
-  background-color: white;
-  padding: 20px;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: left;
+    font-weight: 300;
+    width: 30%;
+    border-width: 2px;
+    border-radius: 6px;
+    border-style: solid;
+    background-color: white;
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
 }
 
 label {
@@ -220,52 +221,55 @@ input {
 /* UPDATES */
 
 hr.update {
-  width: 40%;
-  margin-top: 20px;
-  margin-bottom: 20px;
+    width: 40%;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .update_h a {
-  color: black;
-  text-decoration: none;
+    color: black;
+    text-decoration: none;
 }
 
 .update_h a:hover {
-  color: #559dc6;
+    color: #559dc6;
 }
 
 /* TABLE */
 table {
-  border: 1px solid;
-  width: 100%;
-}
-th{
-  border: 1px solid;
-  text-align: left;
-  padding-left: 3px;
+    border: 1px solid;
+    width: 100%;
 }
 
-td{
-  border: 1px solid;
-  text-align: left;
-  padding-left: 3px;
+th {
+    border: 1px solid;
+    text-align: left;
+    padding-left: 3px;
 }
+
+td {
+    border: 1px solid;
+    text-align: left;
+    padding-left: 3px;
+}
+
 form.table {
-  border: none;
-  width: 100%;
-  background-color: transparent;
-  resize: none;
-  outline: none;
-  padding: 0%;
-  margin: 0%;
-}
-button.table {
-  width: 80px;
-  margin-bottom: 3px;
-  margin-top:3px;
+    border: none;
+    width: 100%;
+    background-color: transparent;
+    resize: none;
+    outline: none;
+    padding: 0%;
+    margin: 0%;
 }
 
-a.table{
+button.table {
+    width: 80px;
+    margin-bottom: 3px;
+    margin-top: 3px;
+}
+
+a.table {
     float: left;
     display: block;
     color: black;
@@ -277,22 +281,23 @@ a.table{
 
 /* SHOW */
 .show {
-  text-align: center;
-  font-size: 30px;
-  color: black;
-  font-weight: bolder;
-}
-table.show {
-  text-align: center;
-  font-size: 20px;
-  font-weight: 500;
-  border: 6px solid;
-  width: 60%;
-  margin-left: auto;
-  margin-right: auto;
+    text-align: center;
+    font-size: 30px;
+    color: black;
+    font-weight: bolder;
 }
 
-a.show_table{
+table.show {
+    text-align: center;
+    font-size: 20px;
+    font-weight: 500;
+    border: 6px solid;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+a.show_table {
     color: #559dc6;
     font-weight: 500;
     font-size: large;

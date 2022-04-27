@@ -1,3 +1,4 @@
+<!-- Admin only page, but similar to the user Index page. -->
 <!DOCTYPE html>
 <html>
 
@@ -13,84 +14,75 @@
     <link rel="stylesheet" href="{{ asset('css/main.css') }}">
     <title>Laravel Jobs</title>
 </head>
-
 <!-- style sheet -->
 <link rel="stylesheet" href="css/main.css">
-
 
 <body>
     <div class="topnav">
         <div class="title">LARAVEL JOBS</div>
-
         <nav class="menu">
             <ul>
                 <li><a href="{{ route('home') }}">Home</a></li>
                 <li><a href="{{ route('about') }}">About</a></li>
                 <li> <a href="{{ route('logout') }}"
-                        onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                        Logout
-                    </a></li>
+                        onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
+                </li>
             </ul>
         </nav>
     </div>
 
-
     @section('content')
     <div class="body">
-        <h2>Welcome back to Laravel Jobs, Admin.</h2>
-                        <a href="{{ route('admin.jobs.create') }}" class="btn btn-primary float-right">Add a new position here.</a>
-                    </div>
+        <a href="{{ route('admin.jobs.create') }}" class="btn btn-primary float-right">Add a new position here.</a>
+    </div>
 
-                    <hr>
-                    @if (count($jobs)=== 0)
-                    <p>There are no jobs!</p>
-                    @else
-                    <table>
-                        <thead>
-                            <th>Name:</th>
-                            <th>Location:</th>
-                            <th>Description:</th>
-                            <th>Positions Available:</th>
-                            <th>Requirements:</th>
-                            <th>Wage:</th>
-                            <th>Contact Number:</th>
-                            <th></th>
-                        </thead>
-                        <tbody>
-                            @foreach ($jobs as $job)
-                            <tr data-id="{{ $job->id }}">
-                                <td>{{ $job->name }}</td>
-                                <td>{{ $job->location }}</td>
-                                <td>{{ $job->description }}</td>
-                                <td>{{ $job->positions_available }}</td>
-                                <td>{{ $job->requirements }}</td>
-                                <td>{{ $job->wage }}</td>
-                                <td>{{ $job->contact_phone }}</td>
+    <hr>
+    @if (count($jobs)=== 0)
+    <p>There are no jobs!</p>
+    @else
+    <table>
+        <thead>
+            <th>Name:</th>
+            <th>Location:</th>
+            <th>Description:</th>
+            <th>Positions Available:</th>
+            <th>Requirements:</th>
+            <th>Wage:</th>
+            <th>Contact Number:</th>
+            <th></th>
+        </thead>
+        <tbody>
+            @foreach ($jobs as $job)
+            <tr data-id="{{ $job->id }}">
+                <td>{{ $job->name }}</td>
+                <td>{{ $job->location }}</td>
+                <td>{{ $job->description }}</td>
+                <td>{{ $job->positions_available }}</td>
+                <td>{{ $job->requirements }}</td>
+                <td>{{ $job->wage }}</td>
+                <td>{{ $job->contact_phone }}</td>
 
-                                <td>
-                                <button class="table"><a class="table" href="{{ route('admin.jobs.show', $job->id) }}">View</a></button>
-                                <br>
-                                <button class="table"> <a class="table" href="{{ route('admin.jobs.edit', $job->id) }}">Edit</a></button>
-
-                                    <form class="table" method="POST"
-                                        action="{{ route('admin.jobs.destroy', $job->id) }}">
-                                        <input type="hidden" name="_method" value="DELETE">
-                                        <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                                        <button class="table" type="submit"><a class="table" href="#">Delete</a>
-                                    </form>
-                                </td>
-                            </tr>
-                            @endforeach
-                        </tbody>
-                    </table>
-                    @endif
-
-                    <hr>
-
-
-                </div>
-            </div>
-        </div>
+                <td>
+                    <button class="table"><a class="table"
+                            href="{{ route('admin.jobs.show', $job->id) }}">View</a></button>
+                    <br>
+                    <button class="table"> <a class="table"
+                            href="{{ route('admin.jobs.edit', $job->id) }}">Edit</a></button>
+                    <form class="table" method="POST" action="{{ route('admin.jobs.destroy', $job->id) }}">
+                        <input type="hidden" name="_method" value="DELETE">
+                        <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                        <button class="table" type="submit"><a class="table" href="#">Delete</a>
+                    </form>
+                </td>
+            </tr>
+            @endforeach
+        </tbody>
+    </table>
+    @endif
+    <hr>
+    </div>
+    </div>
+    </div>
     </div>
     </div>
 
@@ -140,5 +132,4 @@
     </div>
     </div>
 </body>
-
 </html>

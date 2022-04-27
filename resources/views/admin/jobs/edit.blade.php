@@ -1,3 +1,4 @@
+<!-- This page is for editing jobs that have already been created. -->
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,26 +11,20 @@
 <link rel="stylesheet" href="{{ asset('css/main.css') }}">
 <title>Laravel Jobs</title>
 </head>
-
 <!-- style sheet -->
 <link rel="stylesheet" href="css/main.css">
 
-
 <body>
     <div class="topnav">
-        <div class="title">LARAVEL JOBS</div>
-        
-    <nav class="menu">
-          <ul>
-            <li><a href="{{ route('home') }}">Home</a></li>
-            <li><a href="{{ route('about') }}">About</a></li>
-           <li> <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
- Logout
-</a></li>
+        <div class="title">LARAVEL JOBS</div>   
+           <nav class="menu">
+            <ul>
+              <li><a href="{{ route('home') }}">Home</a></li>
+              <li><a href="{{ route('about') }}">About</a></li>
+            <li> <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a></li>
           </ul>
         </nav>
         </div>
-
 
 @section('content')
   <div class="container">
@@ -37,7 +32,6 @@
   Edit {{ $job->name }}
     </div>
             
-
             @if ($errors->any())
               <div class="alert alert-danger">
                 <ul>
@@ -81,11 +75,9 @@
                 <label for="contact_phone">Contact Phone:</label>
                 <input type="text" class="form-control" id="contact_phone" name="contact_phone" value="{{ old('contact_phone', $job->contact_phone) }}" />
               </div>
-
-  <br>
+              <br>
               <button type="submit" class="btn btn-primary float-right">Submit</button>
               <a href="{{ route('admin.jobs.index') }}" class="btn btn-outline">Cancel</a>
-              
             </form>
           </div>
         </div>

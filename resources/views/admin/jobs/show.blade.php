@@ -1,27 +1,22 @@
+<!-- Admin use only, this will be for viewing a particular job -->
 <!DOCTYPE html>
 <html>
 
 <head>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('css/main.css') }}">
     <title>Laravel Jobs</title>
 </head>
-
 <!-- style sheet -->
 <link rel="stylesheet" href="css/main.css">
-
-
 <body>
     <div class="topnav">
         <div class="title">LARAVEL JOBS</div>
-
         <nav class="menu">
             <ul>
                 <li><a href="{{ route('home') }}">Home</a></li>
@@ -33,7 +28,6 @@
             </ul>
         </nav>
     </div>
-
 
     @section('content')
     <div class="show">
@@ -80,9 +74,6 @@
                                 </tr>
                             </tbody>
                         </table>
-                        <br>
-                        To apply, please contact the company directly.
-                        <br>
                         <br>
                         <a href="{{ route('admin.jobs.index') }}" class="show_table">View more job offers</a>
                     </div>
