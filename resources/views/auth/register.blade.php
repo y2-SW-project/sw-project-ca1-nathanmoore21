@@ -1,6 +1,7 @@
 <!-- Registration Page -->
 <!DOCTYPE html>
 <html>
+
 <head>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,6 +15,7 @@
 </head>
 <!-- style sheet -->
 <link rel="stylesheet" href="css/main.css">
+
 <body>
     <div class="topnav">
         <div class="title">LARAVEL JOBS</div>
@@ -29,7 +31,8 @@
 
     @section('content')
     <div class="body">
-        <h2>Register for Laravel Jobs</h2>
+        <h2>Login to Laravel Jobs</h2>
+        <h4> - Dublin's Biggest Recruitment Site - </h4>
     </div>
     <hr>
     <div class="main">

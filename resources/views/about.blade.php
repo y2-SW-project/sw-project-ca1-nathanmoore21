@@ -1,6 +1,7 @@
 <!-- About page, can be accessed by anyone -->
 <!DOCTYPE html>
 <html>
+
 <head>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -31,7 +32,8 @@
 
     @section('content')
     <div class="body">
-        <h2>About Laravel Jobs</h2>
+        <h2>Login to Laravel Jobs</h2>
+        <h4> - Dublin's Biggest Recruitment Site - </h4>
         <div class="openpara">Laravel Jobs strives to put you first with free access to search for jobs in your area.
             Each and every day, we connect hundereds of people with new opportunities.
             Create your profile now to get noticed and we’ll help you find the job you’ve always wanted. With Laravel
@@ -93,4 +95,5 @@
     </div>
     </div>
 </body>
+
 </html>

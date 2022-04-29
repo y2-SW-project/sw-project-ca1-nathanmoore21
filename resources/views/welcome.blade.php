@@ -1,6 +1,7 @@
 <!-- Welcome page, can be accessed by anyone, is the inital page that is displayed when opening site -->
 <!DOCTYPE html>
 <html>
+
 <head>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,6 +15,7 @@
 </head>
 <!-- style sheet -->
 <link rel="stylesheet" href="css/main.css">
+
 <body>
     <div class="topnav">
         <div class="title">LARAVEL JOBS</div>
@@ -30,6 +32,7 @@
     @section('content')
     <div class="body">
         <h2>Login to Laravel Jobs</h2>
+        <h4> - Dublin's Biggest Recruitment Site - </h4>
         <div class="openpara">Laravel Jobs strives to put you first with free access to search for jobs in your area.
             Each and every day, we connect hundereds of people with new opportunities.
             Create your profile now to get noticed and we’ll help you find the job you’ve always wanted. With Laravel

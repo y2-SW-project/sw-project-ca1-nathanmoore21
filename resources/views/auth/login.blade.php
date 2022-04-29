@@ -28,6 +28,7 @@
     @section('content')
     <div class="body">
         <h2>Login to Laravel Jobs</h2>
+        <h4> - Dublin's Biggest Recruitment Site - </h4>
         <hr>
         <div class="main">
             <h5>Sign into your account below to discover hundreds of job offers for you!</h5>
